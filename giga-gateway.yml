@@ -25,10 +25,7 @@ eureka:
     client:
         serviceUrl:
             defaultZone:http://localhost:9102/eureka/           
-
-    instance: 
-        hostname:localhost    
-        
+          
 management:
     security:
         enabled:false
