@@ -10,7 +10,7 @@ spring:
   gateway:
    routes:
     - id: userModule
-      uri: http://localhost:8001/
+      uri: lb://utilisateur
       predicates:
        - Path=/utilisateur/**, /login/**, /panier/**
     - id: productModule
