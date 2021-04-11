@@ -6,7 +6,17 @@ spring:
  h2:
   console:
    enabled: true
-   
+ cloud:
+  gateway:
+   routes:
+    - id: userModule
+      uri: lb://GIGA-USERSERVICE
+      predicates:
+       - Path=/utilisateur/**, /login/**
+    - id: productModule
+      uri: http://localhost:8002/
+      predicates:
+       - Path=/produit/**, /categorie/**, /vendeur/**
 server:
  port: 8080
  
@@ -14,8 +24,8 @@ server:
 eureka:
  client:
   service-url:
-   defaultZone: http://localhost:9102/eureka/           
-          
+   defaultZone: http://localhost:9102/eureka/
+                
 management:
  security:
   enabled: false
