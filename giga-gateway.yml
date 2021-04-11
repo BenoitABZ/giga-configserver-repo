@@ -6,21 +6,7 @@ spring:
  h2:
   console:
    enabled: true
- cloud:
-  gateway:
-   routes:
-    - id: userModule
-      uri: lb://utilisateur
-      predicates:
-       - Path=/utilisateur/**, /login/**, /panier/**
-    - id: productModule
-      uri: http://localhost:8002/
-      predicates:
-       - Path=/produit/**, /categorie/**, /vendeur/**
-    - id: sellerModule
-      uri: http://localhost:8003/
-      predicates:
-       - Path=/vendeur/**
+   
 server:
  port: 8080
  
