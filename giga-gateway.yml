@@ -16,7 +16,11 @@ spring:
    - id: productModule
      uri: http://localhost:8002/
      predicates:
-      - Path=/produit/**,/categorie/**,/vendeur/**
+      - Path=/produit/**,/categorie/**
+   - id: productModule
+     uri: http://localhost:8003/
+     predicates:
+      - Path=/vendeur/**
       
 server:
  port: 8080
