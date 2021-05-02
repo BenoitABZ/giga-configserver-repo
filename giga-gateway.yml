@@ -12,11 +12,11 @@ spring:
    - id: userModule
      uri: http://localhost:8001/
      predicates:
-     - Path=/utilisateur/**,/panier/**
+     - Path=/utilisateur/**, /panier/**
    - id: productModule
      uri: http://localhost:8002/
      predicates:
-     - Path=/produit/**,/categorie/**
+     - Path=/produit/**, /categorie/**
    - id: sellerModule
      uri: http://localhost:8003/
      predicates:
