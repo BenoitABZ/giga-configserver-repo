@@ -9,18 +9,18 @@ spring:
  cloud:
   gateway:
    routes:
-   - id: userModule
-     uri: http://localhost:8001/
-     predicates:
-      - Path=/utilisateur/**,/panier/**
-   - id: productModule
-     uri: http://localhost:8002/
-     predicates:
-      - Path=/produit/**,/categorie/**
-   - id: productModule
-     uri: http://localhost:8003/
-     predicates:
-      - Path=/vendeur/**
+    - id: userModule
+      uri: http://localhost:8001/
+      predicates:
+       - Path=/utilisateur/**,/panier/**
+    - id: productModule
+      uri: http://localhost:8002/
+      predicates:
+       - Path=/produit/**,/categorie/**
+    - id: sellerModule
+      uri: http://localhost:8003/
+      predicates:
+       - Path=/vendeur/**
       
 server:
  port: 8080
